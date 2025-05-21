@@ -13,6 +13,10 @@ datos <- tibble(
 datos <- datos %>%
   mutate(total = mamiferos + aves)
 
+# Agrego una columna de proporción de mamíferos
+datos <- datos %>%
+  mutate(prop_mamiferos = mamiferos / total)
+
 # Ver resultados
 print(datos)
 
